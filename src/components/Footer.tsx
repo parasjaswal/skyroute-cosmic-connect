@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Plane, Mail, FileText, Shield } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -8,14 +9,14 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
+            <Link to="/" className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
                 <Plane className="w-5 h-5 text-primary-foreground" />
               </div>
               <span className="font-display text-xl font-bold">
                 SKYROUTE <span className="glow-text">API</span>
               </span>
-            </div>
+            </Link>
             <p className="text-muted-foreground max-w-md mb-6">
               Powering the world's travel platforms with unified API access to flights, hotels, 
               and global inventory. Built for B2B scale.
@@ -33,25 +34,25 @@ const Footer = () => {
             <h4 className="font-display font-semibold mb-4">Resources</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2">
+                <Link to="/docs" className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2">
                   <FileText className="w-4 h-4" />
                   API Documentation
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Integration Guides
-                </a>
+                <Link to="/pricing" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Pricing Plans
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  SDK Downloads
-                </a>
+                <Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors">
+                  About Us
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  API Status
-                </a>
+                <Link to="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Contact Sales
+                </Link>
               </li>
             </ul>
           </div>
